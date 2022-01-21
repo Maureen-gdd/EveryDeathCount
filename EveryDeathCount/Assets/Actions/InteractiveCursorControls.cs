@@ -44,6 +44,15 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Drag and Drop"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb459749-dc51-4f09-9c90-ab0d32c0c024"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,17 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
                     ""action"": ""Position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9447bc28-15fc-450d-bf20-43dbc3550a8b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag and Drop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +98,7 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
         m_Mouse_Click = m_Mouse.FindAction("Click", throwIfNotFound: true);
         m_Mouse_Position = m_Mouse.FindAction("Position", throwIfNotFound: true);
+        m_Mouse_DragandDrop = m_Mouse.FindAction("Drag and Drop", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -139,12 +160,14 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
     private IMouseActions m_MouseActionsCallbackInterface;
     private readonly InputAction m_Mouse_Click;
     private readonly InputAction m_Mouse_Position;
+    private readonly InputAction m_Mouse_DragandDrop;
     public struct MouseActions
     {
         private @InteractiveCursorControls m_Wrapper;
         public MouseActions(@InteractiveCursorControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Click => m_Wrapper.m_Mouse_Click;
         public InputAction @Position => m_Wrapper.m_Mouse_Position;
+        public InputAction @DragandDrop => m_Wrapper.m_Mouse_DragandDrop;
         public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -160,6 +183,9 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
                 @Position.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnPosition;
                 @Position.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnPosition;
                 @Position.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnPosition;
+                @DragandDrop.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnDragandDrop;
+                @DragandDrop.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnDragandDrop;
+                @DragandDrop.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnDragandDrop;
             }
             m_Wrapper.m_MouseActionsCallbackInterface = instance;
             if (instance != null)
@@ -170,6 +196,9 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
                 @Position.started += instance.OnPosition;
                 @Position.performed += instance.OnPosition;
                 @Position.canceled += instance.OnPosition;
+                @DragandDrop.started += instance.OnDragandDrop;
+                @DragandDrop.performed += instance.OnDragandDrop;
+                @DragandDrop.canceled += instance.OnDragandDrop;
             }
         }
     }
@@ -178,5 +207,6 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
     {
         void OnClick(InputAction.CallbackContext context);
         void OnPosition(InputAction.CallbackContext context);
+        void OnDragandDrop(InputAction.CallbackContext context);
     }
 }

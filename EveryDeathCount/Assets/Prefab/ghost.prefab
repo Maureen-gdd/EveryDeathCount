@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8756964973590296624}
   - component: {fileID: 8756964973590296627}
   - component: {fileID: 8756964973590296626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 8756964973590296629}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd8f59178f0967443b1e444ffe079769, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6069546044a5de1478ea3a75f07fb2ac, type: 2}
   m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
