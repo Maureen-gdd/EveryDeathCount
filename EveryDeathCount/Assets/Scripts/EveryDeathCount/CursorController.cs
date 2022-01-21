@@ -53,6 +53,7 @@ public class CursorController : MonoBehaviour
             if(interactable != null)
             {
                 interactable.OnClickAction();
+                Debug.Log("clique");
             }
         }   
     }
