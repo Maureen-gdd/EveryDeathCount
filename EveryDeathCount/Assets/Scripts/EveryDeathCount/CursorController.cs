@@ -8,6 +8,10 @@ public class CursorController : MonoBehaviour
     private Vector2 positionMouse;
     private Vector3 position;
     private RaycastHit2D hit;
+    private bool interactive = false;
+    private IInteractable interactable;
+
+    public bool click = true;
 
     [SerializeField]
     private Texture2D interactiveCursorTexture;
@@ -25,10 +29,12 @@ public class CursorController : MonoBehaviour
  
         if(hit.collider != null)
         {
+            interactive = true;
             InteractiveCursorTexture();
         }
         else
         {
+            interactive = false;
             DefaultCursorTexture();
         }
         
@@ -37,6 +43,18 @@ public class CursorController : MonoBehaviour
     public void Position(InputAction.CallbackContext context)
     {
         positionMouse = context.ReadValue<Vector2>();
+    }
+
+    public void Click(InputAction.CallbackContext context)
+    {
+        if(interactive)
+        {
+            interactable = hit.transform.gameObject.GetComponent<IInteractable>();
+            if(interactable != null)
+            {
+                interactable.OnClickAction();
+            }
+        }   
     }
 
     private void InteractiveCursorTexture()
