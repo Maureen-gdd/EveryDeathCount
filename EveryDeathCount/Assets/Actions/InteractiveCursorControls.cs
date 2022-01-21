@@ -33,7 +33,7 @@ public partial class @InteractiveCursorControls : IInputActionCollection2, IDisp
                     ""id"": ""cf71794d-fa9b-4c09-95d5-98609cf6d7fa"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
