@@ -11,7 +11,6 @@ public class DragNDrop : MonoBehaviour
     private Vector2 startPosition;
     private float isDragable = 0;
     private bool isDragging = false;
-    private float speed = 10;
 
     // Start is called before the first frame update
     void Start()

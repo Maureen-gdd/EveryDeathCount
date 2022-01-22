@@ -52,8 +52,8 @@ public class CursorController : MonoBehaviour
             interactable = hit.transform.gameObject.GetComponent<IInteractable>();
             if(interactable != null)
             {
-                interactable.OnClickAction();
-                Debug.Log("clique");
+                interactable.OnClickAction(context);
+                //Debug.Log("click");
             }
         }   
     }
