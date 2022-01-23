@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class CursorController : MonoBehaviour
 {
     private Vector2 positionMouse;
-    private Vector3 position;
+    private Vector3 screenPosition;
     private RaycastHit2D hit;
     private bool interactive = false;
     private IInteractable interactable;
@@ -23,9 +23,9 @@ public class CursorController : MonoBehaviour
 
     private void FindInteractable()
     {
-        position = Camera.main.ScreenToWorldPoint(positionMouse);
+        screenPosition = Camera.main.ScreenToWorldPoint(positionMouse);
         
-        hit = Physics2D.Raycast(position, Vector3.forward, Mathf.Infinity);
+        hit = Physics2D.Raycast(screenPosition, Vector3.forward, Mathf.Infinity);
  
         if(hit.collider != null)
         {
@@ -52,8 +52,8 @@ public class CursorController : MonoBehaviour
             interactable = hit.transform.gameObject.GetComponent<IInteractable>();
             if(interactable != null)
             {
-                interactable.OnClickAction();
-                Debug.Log("clique");
+                interactable.OnClickAction(context);
+                //Debug.Log("click");
             }
         }   
     }

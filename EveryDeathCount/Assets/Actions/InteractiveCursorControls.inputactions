@@ -11,7 +11,7 @@
                     "id": "cf71794d-fa9b-4c09-95d5-98609cf6d7fa",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Drag and Drop",
+                    "type": "Button",
+                    "id": "cb459749-dc51-4f09-9c90-ab0d32c0c024",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -44,6 +53,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9447bc28-15fc-450d-bf20-43dbc3550a8b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag and Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

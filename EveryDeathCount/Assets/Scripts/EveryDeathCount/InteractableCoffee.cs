@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InteractableCoffee : MonoBehaviour, IInteractable
 {
@@ -12,7 +13,7 @@ public class InteractableCoffee : MonoBehaviour, IInteractable
     {
         if(instantiate)
         {
-            if(newGhost.transform.position.y > 5.2)
+            if(newGhost.transform.position.y > 6.3)
             {
                 Destroy(newGhost);
                 instantiate = false;
@@ -21,7 +22,7 @@ public class InteractableCoffee : MonoBehaviour, IInteractable
         }
     }
 
-    public void OnClickAction()
+    public void OnClickAction(InputAction.CallbackContext context)
     {
         if(instantiate != true)
         {
