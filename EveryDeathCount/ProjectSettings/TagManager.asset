@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - slide
+  - DragNDrop
   layers:
   - Default
   - TransparentFX

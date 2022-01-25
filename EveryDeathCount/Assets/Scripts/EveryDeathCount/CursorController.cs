@@ -5,10 +5,13 @@ using UnityEngine.InputSystem;
 
 public class CursorController : MonoBehaviour
 {
+    private GameObject objectToDrag;
     private Vector2 positionMouse;
     private Vector3 screenPosition;
     private RaycastHit2D hit;
     private bool interactive = false;
+    private float isDragable = 0;
+    private float startPositionZ;
     private IInteractable interactable;
 
     public bool click = true;
@@ -38,6 +41,11 @@ public class CursorController : MonoBehaviour
             DefaultCursorTexture();
         }
         
+        if(isDragable != 0)
+        {
+            Debug.Log("Is being dragged");
+            objectToDrag.transform.position = new Vector3(screenPosition.x, screenPosition.y, startPositionZ);
+        }
     }
 
     public void Position(InputAction.CallbackContext context)
@@ -55,12 +63,29 @@ public class CursorController : MonoBehaviour
                 interactable.OnClickAction(context);
                 //Debug.Log("click");
             }
+
         }   
+    }
+
+    public void DragAndDrop(InputAction.CallbackContext context)
+    {
+        //Debug.Log(hit.transform.gameObject.tag);
+ 
+        if(hit.collider != null)
+        {
+            if(hit.transform.gameObject.tag == "DragNDrop")
+            {
+                objectToDrag = hit.transform.gameObject;
+                startPositionZ = objectToDrag.transform.position.z;
+                Debug.Log(context.ReadValue<float>());
+                isDragable = context.ReadValue<float>();
+            }
+        }
     }
 
     private void InteractiveCursorTexture()
     {
-        Vector2 hotspot = new Vector2(interactiveCursorTexture.width / 4,0);
+        Vector2 hotspot = new Vector2(interactiveCursorTexture.width / 2,0);
         Cursor.SetCursor(interactiveCursorTexture, hotspot, CursorMode.Auto);
     }
 
