@@ -15,11 +15,11 @@ public class Slideshow : MonoBehaviour, IInteractable
 
     public void OnClickAction(InputAction.CallbackContext context)
     {
-        //Debug.Log("click on the tablet");
-        //Debug.Log(wait);
+        Debug.Log("click on the tablet");
+        Debug.Log(wait);
         if(counter == 0 && !wait)
         {
-            //Debug.Log("Awake");
+            Debug.Log("Awake");
             startPosition = transform.position;
             startScale = transform.localScale;
             //Debug.Log("Before");
