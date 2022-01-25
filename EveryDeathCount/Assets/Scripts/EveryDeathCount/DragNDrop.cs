@@ -5,26 +5,21 @@ using UnityEngine.InputSystem;
 
 public class DragNDrop : MonoBehaviour
 {
-    private Collider2D objectCollider;
     private Vector2 positionMouse;
     private Vector2 screenPosition;
-    private Vector2 startPosition;
+    private RaycastHit2D hit;
+    private float startPositionZ;
     private float isDragable = 0;
-    private bool isDragging = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        objectCollider = GetComponent<Collider2D>();
-    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        hit = Physics2D.Raycast(screenPosition, Vector3.forward, Mathf.Infinity);
         screenPosition = Camera.main.ScreenToWorldPoint(positionMouse);
-        if(isDragable != 0 && isDragging)
+
+        if(isDragable != 0)
         {
-            this.transform.position = screenPosition;
+            this.transform.position = new Vector3(screenPosition.x, screenPosition.y, startPositionZ);
         }
     }
 
@@ -35,16 +30,15 @@ public class DragNDrop : MonoBehaviour
 
     public void DragAndDrop(InputAction.CallbackContext context)
     {
-        //Debug.Log(context.ReadValue<float>());
-        isDragable = context.ReadValue<float>();
-        startPosition = screenPosition;
-        if(objectCollider == Physics2D.OverlapPoint(screenPosition))
+ 
+        if(hit.collider != null)
         {
-            isDragging = true;
-        }
-        else
-        {
-            isDragging = false;
+            if(hit.transform.gameObject.name == this.name)
+            {
+               startPositionZ = transform.position.z;
+               //Debug.Log(context.ReadValue<float>());
+               isDragable = context.ReadValue<float>();
+            }
         }
     }
 }
