@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InteractableOven : MonoBehaviour, IInteractable
+public class InteractableDialogue : MonoBehaviour, IInteractable
 {
     public DialogueTrigger dialogTrigger;
 
