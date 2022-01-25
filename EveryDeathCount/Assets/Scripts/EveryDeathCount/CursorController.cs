@@ -60,7 +60,7 @@ public class CursorController : MonoBehaviour
 
     private void InteractiveCursorTexture()
     {
-        Vector2 hotspot = new Vector2(interactiveCursorTexture.width / 2,0);
+        Vector2 hotspot = new Vector2(interactiveCursorTexture.width / 4,0);
         Cursor.SetCursor(interactiveCursorTexture, hotspot, CursorMode.Auto);
     }
 
