@@ -232,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &41162244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1088,8 @@ GameObject:
   - component: {fileID: 338567485}
   - component: {fileID: 338567484}
   - component: {fileID: 338567483}
+  - component: {fileID: 338567488}
+  - component: {fileID: 338567486}
   m_Layer: 0
   m_Name: Public
   m_TagString: Untagged
@@ -1124,9 +1126,9 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - The TV seems to be on all the time.
-    - There is only one channel. It follows the life of ordinary people.
-    - It's at the same time boring and captivating.
+    - The audience seems happy with the performance of the orchestra.
+    - They don't seem bothered by the absence of the pianist.
+    - Good for them !
 --- !u!114 &338567484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1168,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &338567486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338567481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
 --- !u!212 &338567487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1217,6 +1234,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &338567488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338567481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 0}
 --- !u!1 &354851289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1260,8 @@ GameObject:
   - component: {fileID: 354851293}
   - component: {fileID: 354851292}
   - component: {fileID: 354851291}
+  - component: {fileID: 354851296}
+  - component: {fileID: 354851294}
   m_Layer: 0
   m_Name: Drummer
   m_TagString: Untagged
@@ -1266,9 +1298,13 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - The TV seems to be on all the time.
-    - There is only one channel. It follows the life of ordinary people.
-    - It's at the same time boring and captivating.
+    - The drummer's stick accidentally bounced against his drum. It landed on the
+      violinist's head.
+    - They argue silently while continuing to play.
+    - But suddenly something changes in their gaze ...
+    - Could it be... love ?
+    - Some people will join in the dressing room tonight...
+    - It's better than your favorite show, "Plus Belle La Mort".
 --- !u!114 &354851292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,6 +1344,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &354851294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354851289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
 --- !u!212 &354851295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1359,6 +1410,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &354851296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354851289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 0}
 --- !u!1 &378855945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1434,8 @@ GameObject:
   - component: {fileID: 378855946}
   - component: {fileID: 378855948}
   - component: {fileID: 378855947}
+  - component: {fileID: 378855950}
+  - component: {fileID: 378855949}
   m_Layer: 0
   m_Name: Spices
   m_TagString: Untagged
@@ -1468,6 +1534,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &378855949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378855945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - There are a lot of meat spices.
+    - They really like meat huh.
+--- !u!114 &378855950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378855945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 378855949}
 --- !u!1 &423795084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1577,8 @@ GameObject:
   - component: {fileID: 423795088}
   - component: {fileID: 423795087}
   - component: {fileID: 423795086}
+  - component: {fileID: 423795091}
+  - component: {fileID: 423795090}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -1517,9 +1615,10 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - The TV seems to be on all the time.
-    - There is only one channel. It follows the life of ordinary people.
-    - It's at the same time boring and captivating.
+    - Someone is waving at you from the other side of the boxes.
+    - You respond by waving your hand as well.
+    - They smile. You smile too.
+    - This is the beginning of a beautiful friendship.
 --- !u!114 &423795087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,6 +1709,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &423795090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423795084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+--- !u!114 &423795091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423795084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 0}
 --- !u!1 &435636857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1936,9 @@ GameObject:
   m_Component:
   - component: {fileID: 470168890}
   - component: {fileID: 470168891}
+  - component: {fileID: 470168893}
+  - component: {fileID: 470168892}
+  - component: {fileID: 470168894}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -1881,6 +2011,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &470168892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470168889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 'Head:'
+    sentences:
+    - Oh hello there !
+    - It's not often that I have company.
+    - I know we just met, but as the French would say...
+    - "\"Tu me fais perdre la t\xEAte\"."
+    - "I know that I don't have \"la t\xEAte sur les \xE9paules\", but don't hesitate
+      to pass me your number !"
+    - Ha ha ha !
+    - Ha ha...
+--- !u!114 &470168893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470168889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 470168892}
+--- !u!61 &470168894
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470168889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.22, y: 0.9}
+    newSize: {x: 1.22, y: 0.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.22, y: 0.9}
+  m_EdgeRadius: 0
 --- !u!1 &490225545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3274,8 @@ GameObject:
   - component: {fileID: 865835479}
   - component: {fileID: 865835481}
   - component: {fileID: 865835480}
+  - component: {fileID: 865835483}
+  - component: {fileID: 865835482}
   m_Layer: 0
   m_Name: wine
   m_TagString: Untagged
@@ -3180,6 +3374,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &865835482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865835478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - You don't really know much about wine, but it seems quite thick...
+--- !u!114 &865835483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865835478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 865835482}
 --- !u!1 &910053790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,6 +3416,8 @@ GameObject:
   - component: {fileID: 910053794}
   - component: {fileID: 910053793}
   - component: {fileID: 910053792}
+  - component: {fileID: 910053797}
+  - component: {fileID: 910053795}
   m_Layer: 0
   m_Name: Piano
   m_TagString: Untagged
@@ -3229,9 +3454,12 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - The TV seems to be on all the time.
-    - There is only one channel. It follows the life of ordinary people.
-    - It's at the same time boring and captivating.
+    - You can hear a very beautiful melody coming from the stage.
+    - 'But... where is the pianist? '
+    - You have the impression of seeing claw marks on the ground, as if someone had
+      been taken away against their will.
+    - But hey, you're so far away that you're not sure of anything.
+    - You and your stingy habits, always taking the cheapest seats...
 --- !u!114 &910053793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3271,6 +3499,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &910053795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910053790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
 --- !u!212 &910053796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3322,6 +3565,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &910053797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910053790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 0}
 --- !u!1 &919873365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,6 +3807,8 @@ GameObject:
   - component: {fileID: 941037059}
   - component: {fileID: 941037061}
   - component: {fileID: 941037060}
+  - component: {fileID: 941037063}
+  - component: {fileID: 941037062}
   m_Layer: 0
   m_Name: Plants
   m_TagString: Untagged
@@ -3649,6 +3907,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &941037062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941037058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - You don't know what they use as a fertilizer but the plants are in excellent
+      health!
+    - They even managed to grow an avocado !
+    - What an achievement.
+--- !u!114 &941037063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941037058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 941037062}
 --- !u!1 &992226842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,6 +4583,7 @@ GameObject:
   - component: {fileID: 1068937784}
   - component: {fileID: 1068937783}
   - component: {fileID: 1068937782}
+  - component: {fileID: 1068937786}
   m_Layer: 5
   m_Name: ChoiceCanvas
   m_TagString: Untagged
@@ -4385,6 +4676,102 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &1068937786
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068937781}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 45f28ed100e16d1488f1c7d16d2c8f16, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1091404554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +5266,8 @@ GameObject:
   - component: {fileID: 1180543267}
   - component: {fileID: 1180543271}
   - component: {fileID: 1180543270}
+  - component: {fileID: 1180543272}
+  - component: {fileID: 1180543268}
   m_Layer: 0
   m_Name: Annoying People
   m_TagString: Untagged
@@ -4913,7 +5302,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4924,8 +5313,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1180543268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180543265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
 --- !u!212 &1180543269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4992,9 +5396,16 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - The TV seems to be on all the time.
-    - There is only one channel. It follows the life of ordinary people.
-    - It's at the same time boring and captivating.
+    - "BLA BLA BLA BLA taxes BLA BLA BLA BLA babies \n"
+    - 'BLA BLA BLA BLA the personal dimensions of the search for meaning in the human
+      species '
+    - BLA BLA BLA BLA Do you know what Martine did ???????!
+    - There are really annoying people in front of you.
+    - Have they no manners ?
+    - "AND YOU IN FRONT ! \n"
+    - SHUT UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUP !
+    - Aaaaah...
+    - You feel better now.
 --- !u!114 &1180543271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5008,6 +5419,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogTrigger: {fileID: 1180543270}
+--- !u!114 &1180543272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180543265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 0}
 --- !u!1 &1197369871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,6 +5643,8 @@ GameObject:
   - component: {fileID: 1233971671}
   - component: {fileID: 1233971673}
   - component: {fileID: 1233971672}
+  - component: {fileID: 1233971675}
+  - component: {fileID: 1233971674}
   m_Layer: 0
   m_Name: MicroWave
   m_TagString: Untagged
@@ -5317,6 +5743,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1233971674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233971670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - You can't identify the dish but it smells very good.
+    - The meat looks very tasty.
+--- !u!114 &1233971675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233971670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 1233971674}
 --- !u!1 &1233973887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6606,6 +7062,7 @@ MonoBehaviour:
   - {fileID: 1925025358}
   - {fileID: 69543337}
   choiceCanvas: {fileID: 1068937781}
+  musicBackground: {fileID: 1737853459}
 --- !u!61 &1502343928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6941,6 +7398,8 @@ GameObject:
   - component: {fileID: 1529055242}
   - component: {fileID: 1529055243}
   - component: {fileID: 1529055244}
+  - component: {fileID: 1529055246}
+  - component: {fileID: 1529055245}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -7039,6 +7498,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1529055245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529055241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 1529055246}
+--- !u!114 &1529055246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529055241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - Unlike the rest of the house, it's strangely messy here.
+    - Ropes, heavy tape, a Swiss army knife...
+    - 'They seem well equipped for any situation. '
 --- !u!1 &1533933154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8034,6 +8524,8 @@ GameObject:
   - component: {fileID: 1789593208}
   - component: {fileID: 1789593209}
   - component: {fileID: 1789593210}
+  - component: {fileID: 1789593212}
+  - component: {fileID: 1789593211}
   m_Layer: 0
   m_Name: Canape
   m_TagString: Untagged
@@ -8132,6 +8624,46 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1789593211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789593207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - What a peaceful atmosphere.
+    - You sit on the sofa.
+    - It makes you strangely want to talk about your life, how you became a grim
+      reaper.
+    - 'Your parents always pushed you to have ambitions, maybe a bit too much. '
+    - It's true that during your childhood it wasn't always easy and...
+    - Erm...
+    - You're not here to talk about you, work, you lazybones.
+    - 'Ha ha ha !
+
+      Ha ha...'
+    - Still not funny man.
+--- !u!114 &1789593212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789593207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 1789593211}
 --- !u!1 &1812431759
 GameObject:
   m_ObjectHideFlags: 0
@@ -8252,6 +8784,8 @@ GameObject:
   - component: {fileID: 1827096161}
   - component: {fileID: 1827096162}
   - component: {fileID: 1827096163}
+  - component: {fileID: 1827096165}
+  - component: {fileID: 1827096164}
   m_Layer: 0
   m_Name: Books
   m_TagString: Untagged
@@ -8350,6 +8884,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1827096164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827096160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - Lot of books about medecine, human body, psychiatry...
+    - If you let this soul go on earth, they will surely become a doctor.
+    - Oh ! There is also Harry Reaper, the poor little magical soul !
+    - One of your favorite book.
+    - What a soul of taste.
+--- !u!114 &1827096165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827096160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 1827096164}
 --- !u!1 &1878805979
 GameObject:
   m_ObjectHideFlags: 0
@@ -9376,6 +9943,8 @@ GameObject:
   - component: {fileID: 2002900061}
   - component: {fileID: 2002900063}
   - component: {fileID: 2002900062}
+  - component: {fileID: 2002900065}
+  - component: {fileID: 2002900064}
   m_Layer: 0
   m_Name: stick
   m_TagString: Untagged
@@ -9474,6 +10043,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2002900064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002900060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - 'Your mother told you enough: eat your vegetables.'
+    - E    A    T
+    - Y    O    U    R
+    - V    E    G    E    T    A    B    L    E    S.
+--- !u!114 &2002900065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002900060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 2002900064}
 --- !u!1 &2012848846
 GameObject:
   m_ObjectHideFlags: 0
@@ -9485,6 +10086,8 @@ GameObject:
   - component: {fileID: 2012848847}
   - component: {fileID: 2012848849}
   - component: {fileID: 2012848848}
+  - component: {fileID: 2012848851}
+  - component: {fileID: 2012848850}
   m_Layer: 0
   m_Name: Ustensiles
   m_TagString: Untagged
@@ -9583,6 +10186,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2012848850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012848846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b682c4c49cc6b4b978d68bde7c9d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences:
+    - There is a great variety of utensils, perfect for cooking !
+    - Everything is shiny and the knives are particularly sharp !
+    - If you had skin, you'd cut yourself just looking at them.
+--- !u!114 &2012848851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012848846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4cff3cdfbfcba49b2f3dca60d0e5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTrigger: {fileID: 2012848850}
 --- !u!1 &2027926913
 GameObject:
   m_ObjectHideFlags: 0
@@ -10068,6 +10702,7 @@ MonoBehaviour:
   - {fileID: 2064144312}
   - {fileID: 1925025358}
   - {fileID: 69543337}
+  musicBackground: {fileID: 1737853459}
 --- !u!212 &2054685445
 SpriteRenderer:
   m_ObjectHideFlags: 0
