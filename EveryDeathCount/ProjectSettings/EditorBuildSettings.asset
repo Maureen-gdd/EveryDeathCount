@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trump.unity
     guid: a07027d5018bf4449ac471e36dce65ab
+  - enabled: 1
+    path: Assets/Scenes/Lecter.unity
+    guid: 8910a41f1a9df90449873e37d85ed0d7
   m_configObjects: {}

@@ -2902,6 +2902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceButton1: {fileID: 757568176}
   choiceButton2: {fileID: 1533933155}
+  nextScene: Lecter
 --- !u!1 &1533933154
 GameObject:
   m_ObjectHideFlags: 0

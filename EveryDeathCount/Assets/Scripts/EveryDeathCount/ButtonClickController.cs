@@ -2,11 +2,13 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonClickController : MonoBehaviour
 {
     public Button choiceButton1;
     public Button choiceButton2;
+    public string nextScene;
 
 
     // Start is called before the first frame update
@@ -21,13 +23,13 @@ public class ButtonClickController : MonoBehaviour
 
     private void OnChoiceButton2Click()
     {
-        Debug.Log("Choix : Prendre l'âme");
+        Debug.Log("Choix : Destroy it");
         WriteChoiceInFile("0");
     }
 
     private void OnChoiceButton1Click()
     {
-        Debug.Log("Choix : Laisser tranquille");
+        Debug.Log("Choix : Leave it");
         WriteChoiceInFile("1");
     }
 
@@ -39,5 +41,7 @@ public class ButtonClickController : MonoBehaviour
         byte[] info = new UTF8Encoding(true).GetBytes(choice + "\n");
 
         file.Write(info, 0, info.Length);
+
+        SceneManager.LoadScene(nextScene);
     }
 }
