@@ -9,7 +9,10 @@ public class CursorController : MonoBehaviour
     private Vector3 screenPosition;
     private RaycastHit2D hit;
     private bool interactive = false;
+    private float isDragable = 0;
+    private float startPositionZ;
     private IInteractable interactable;
+    private GameObject objectToMove;
 
     public bool click = true;
 
@@ -37,6 +40,11 @@ public class CursorController : MonoBehaviour
             interactive = false;
             DefaultCursorTexture();
         }
+
+        if(isDragable != 0)
+        {
+            objectToMove.transform.position = new Vector3(screenPosition.x, screenPosition.y, startPositionZ);
+        }
         
     }
 
@@ -54,6 +62,14 @@ public class CursorController : MonoBehaviour
             {
                 interactable.OnClickAction(context);
                 //Debug.Log("click");
+            }
+
+            if(hit.transform.gameObject.tag == "DragNDrop")
+            {
+                objectToMove = hit.transform.gameObject;
+                startPositionZ = objectToMove.transform.position.z;
+                //Debug.Log(context.ReadValue<float>());
+                isDragable = context.ReadValue<float>();
             }
         }   
     }

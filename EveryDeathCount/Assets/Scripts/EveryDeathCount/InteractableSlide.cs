@@ -18,7 +18,7 @@ public class InteractableSlide : MonoBehaviour, IInteractable
     {
             if(wait)
             {
-                Debug.Log("ça chaaaange");
+                Debug.Log("change of slide");
                 wait = false;
                 room[currentRoomNumber].SetActive(false);
                 currentRoomNumber ++;

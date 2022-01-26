@@ -13,7 +13,7 @@ public class InteractableCross : MonoBehaviour, IInteractable
     {
         if(wait)
         {
-            if(website.Length > 1)
+            if(i < 18)
             {
                 wait = false;
                 website[i + 1].SetActive(true);
@@ -23,9 +23,11 @@ public class InteractableCross : MonoBehaviour, IInteractable
                 StartCoroutine(Wait());
 
             }
-            else if(website.Length == 1)
+            else if(i == 18)
             {
-                Destroy(website[19]);
+                Debug.Log("Last object");
+                Destroy(website[18]);
+                i++;
             }
 
         }
