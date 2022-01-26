@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class CursorController : MonoBehaviour
 {
-    private GameObject objectToDrag;
     private Vector2 positionMouse;
     private Vector3 screenPosition;
     private RaycastHit2D hit;
@@ -13,6 +12,7 @@ public class CursorController : MonoBehaviour
     private float isDragable = 0;
     private float startPositionZ;
     private IInteractable interactable;
+    private GameObject objectToMove;
 
     public bool click = true;
 
@@ -40,12 +40,12 @@ public class CursorController : MonoBehaviour
             interactive = false;
             DefaultCursorTexture();
         }
-        
+
         if(isDragable != 0)
         {
-            Debug.Log("Is being dragged");
-            objectToDrag.transform.position = new Vector3(screenPosition.x, screenPosition.y, startPositionZ);
+            objectToMove.transform.position = new Vector3(screenPosition.x, screenPosition.y, startPositionZ);
         }
+        
     }
 
     public void Position(InputAction.CallbackContext context)
@@ -64,23 +64,14 @@ public class CursorController : MonoBehaviour
                 //Debug.Log("click");
             }
 
-        }   
-    }
-
-    public void DragAndDrop(InputAction.CallbackContext context)
-    {
-        //Debug.Log(hit.transform.gameObject.tag);
- 
-        if(hit.collider != null)
-        {
             if(hit.transform.gameObject.tag == "DragNDrop")
             {
-                objectToDrag = hit.transform.gameObject;
-                startPositionZ = objectToDrag.transform.position.z;
-                Debug.Log(context.ReadValue<float>());
+                objectToMove = hit.transform.gameObject;
+                startPositionZ = objectToMove.transform.position.z;
+                //Debug.Log(context.ReadValue<float>());
                 isDragable = context.ReadValue<float>();
             }
-        }
+        }   
     }
 
     private void InteractiveCursorTexture()

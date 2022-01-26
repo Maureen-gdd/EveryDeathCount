@@ -8,6 +8,7 @@ public class InteractableStamp : MonoBehaviour, IInteractable
 {
     public GameObject[] interactableObjects;
     public GameObject choiceCanvas;
+    public AudioSource musicBackground;
 
     public void OnClickAction(InputAction.CallbackContext context)
     {
@@ -16,6 +17,9 @@ public class InteractableStamp : MonoBehaviour, IInteractable
         {
             interactable.SetActive(false);
         }
+
+        //Disable the background's music
+        musicBackground.Stop();
 
         // Enable choice canvas
         choiceCanvas.SetActive(true);

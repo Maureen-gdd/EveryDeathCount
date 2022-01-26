@@ -8,7 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EveryDeathCount - Dialogs.unity
     guid: cf37a4e6164cc6f4aab84e4b281c71d0
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: 0a2fb4923dfc93840b6e4279c425207d
+  - enabled: 1
+    path: Assets/Scenes/Trump.unity
+    guid: a07027d5018bf4449ac471e36dce65ab
+  - enabled: 1
+    path: Assets/Scenes/Lecter.unity
+    guid: 8910a41f1a9df90449873e37d85ed0d7
   m_configObjects: {}
