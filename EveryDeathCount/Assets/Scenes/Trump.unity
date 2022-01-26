@@ -425,7 +425,7 @@ MonoBehaviour:
     - 'is the name of the famous reaper Captain ALED.
 
       It''s his shield.'
-    - He is named from the many humans he has made scream by ripping out their souls.
+    - He is named after the many humans he has made scream by ripping out their souls.
 --- !u!114 &170904257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,7 +1531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Laisser Tranquille
+  m_Text: Leave it
 --- !u!222 &1018196984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2067,7 +2067,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Destroy it
 --- !u!222 &1143827899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2481,48 +2481,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1812431761}
-        m_TargetAssemblyTypeName: DragNDrop, Assembly-CSharp
-        m_MethodName: Position
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1453910931}
-        m_TargetAssemblyTypeName: DragNDrop, Assembly-CSharp
-        m_MethodName: Position
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 9f798a3d-0752-4d1e-b64f-5471859de41a
     m_ActionName: Mouse/Position[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1812431761}
-        m_TargetAssemblyTypeName: DragNDrop, Assembly-CSharp
-        m_MethodName: DragAndDrop
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1453910931}
-        m_TargetAssemblyTypeName: DragNDrop, Assembly-CSharp
+      - m_Target: {fileID: 1309581223}
+        m_TargetAssemblyTypeName: CursorController, Assembly-CSharp
         m_MethodName: DragAndDrop
         m_Mode: 0
         m_Arguments:
@@ -2565,10 +2529,9 @@ GameObject:
   - component: {fileID: 1453910930}
   - component: {fileID: 1453910933}
   - component: {fileID: 1453910932}
-  - component: {fileID: 1453910931}
   m_Layer: 0
   m_Name: carpet
-  m_TagString: Untagged
+  m_TagString: DragNDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2587,18 +2550,6 @@ Transform:
   m_Father: {fileID: 650131068}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1453910931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453910929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0bc565625267ff458b39725a84dab90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1453910932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3546,6 +3497,7 @@ GameObject:
   - component: {fileID: 1737853458}
   - component: {fileID: 1737853457}
   - component: {fileID: 1737853456}
+  - component: {fileID: 1737853459}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3618,6 +3570,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1737853459
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737853455}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd1072cd90a0fad44be632b6bbbc1c12, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1759119481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3709,11 +3757,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1812431760}
   - component: {fileID: 1812431762}
-  - component: {fileID: 1812431761}
   - component: {fileID: 1812431763}
   m_Layer: 0
-  m_Name: trump_Plan de travail 1
-  m_TagString: Untagged
+  m_Name: trump
+  m_TagString: DragNDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3732,18 +3779,6 @@ Transform:
   m_Father: {fileID: 2064144313}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0.751, y: 0, z: 0}
---- !u!114 &1812431761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812431759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0bc565625267ff458b39725a84dab90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1812431762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3812,7 +3847,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.81, y: 35.090385}
+    oldSize: {x: 23.586872, y: 29.029999}
     newSize: {x: 24.81, y: 35.090385}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4410,7 +4445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 135}
+  m_AnchoredPosition: {x: 0, y: 130}
   m_SizeDelta: {x: 660.3973, y: 92.6111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958286440
@@ -4446,9 +4481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Que choisissez-vous ?
-
-'
+  m_Text: What is your choice ?
 --- !u!222 &1958286441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4484,13 +4517,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965528558}
-  m_LocalRotation: {x: -0.10582107, y: 0.5635284, z: -0.087240316, w: 0.81463295}
-  m_LocalPosition: {x: 4.5111, y: -3.715, z: 1}
-  m_LocalScale: {x: 1.6009926, y: 3.0125663, z: 0.1}
+  m_LocalRotation: {x: -0.13707498, y: -0.05161996, z: -0.004407424, w: 0.98920494}
+  m_LocalPosition: {x: 5.4109, y: -3.7004, z: 1.907}
+  m_LocalScale: {x: 2.249129, y: 3.4486616, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1593099764}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -4.249, y: 69.915, z: -15.196}
+  m_LocalEulerAnglesHint: {x: -15.762, y: -6.019, z: 0.323}
 --- !u!61 &1965528560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4628,7 +4661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054685441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -503, y: 209, z: -3700.267}
+  m_LocalPosition: {x: -534, y: 140, z: -3700.267}
   m_LocalScale: {x: 12.33423, y: 11.92308, z: 41.11408}
   m_Children: []
   m_Father: {fileID: 1068937785}
